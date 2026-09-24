@@ -100,6 +100,8 @@ export const Home = () => {
 
   const frame98Index = frames.indexOf("frame_098.png");
 
+  const GITHUB_CDN = 'https://media.githubusercontent.com/media/haris123-cyber/haris-portfolio-/main/public/images/hero/';
+
   // Preload images
   useEffect(() => {
     let settledCount = 0;
@@ -113,15 +115,16 @@ export const Home = () => {
 
     frames.forEach((src, index) => {
       const img = new Image();
-      img.src = `/images/hero/${src}`;
+      // Load from GitHub media CDN (serves actual LFS content, bypasses Vercel LFS issue)
+      img.src = `${GITHUB_CDN}${src}`;
       img.onload = onSettle;
-      img.onerror = onSettle; // don't block on failed images
+      img.onerror = onSettle;
       loadedImages[index] = img;
     });
     setImages(loadedImages);
 
-    // Safety fallback — always show after 5s no matter what
-    const timeout = setTimeout(() => setIsLoaded(true), 5000);
+    // Safety fallback — always show after 8s no matter what
+    const timeout = setTimeout(() => setIsLoaded(true), 8000);
     return () => clearTimeout(timeout);
   }, []);
 
