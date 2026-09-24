@@ -1,6 +1,6 @@
 {
   "framework": "nextjs",
-  "buildCommand": "next build",
+  "buildCommand": "git lfs pull && next build",
   "devCommand": "next dev",
   "installCommand": "npm install"
 }
