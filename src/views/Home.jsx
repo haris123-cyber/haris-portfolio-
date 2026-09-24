@@ -102,18 +102,27 @@ export const Home = () => {
 
   // Preload images
   useEffect(() => {
-    let loadedCount = 0;
-    const loadedImages = [];
+    let settledCount = 0;
+    const loadedImages = new Array(frames.length);
+    const threshold = Math.floor(frames.length * 0.7); // show after 70% loaded
+
+    const onSettle = () => {
+      settledCount++;
+      if (settledCount >= threshold && !isLoaded) setIsLoaded(true);
+    };
+
     frames.forEach((src, index) => {
       const img = new Image();
       img.src = `/images/hero/${src}`;
-      img.onload = () => {
-        loadedCount++;
-        if (loadedCount === frames.length) setIsLoaded(true);
-      };
+      img.onload = onSettle;
+      img.onerror = onSettle; // don't block on failed images
       loadedImages[index] = img;
     });
     setImages(loadedImages);
+
+    // Safety fallback — always show after 5s no matter what
+    const timeout = setTimeout(() => setIsLoaded(true), 5000);
+    return () => clearTimeout(timeout);
   }, []);
 
   const drawImage = (index) => {
