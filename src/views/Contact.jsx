@@ -39,12 +39,12 @@ export const Contact = () => {
               <path
                 key={i}
                 d={`M 0 0 L ${x1} ${y1} L ${x2} ${y2} Z`}
-                fill={i % 2 === 0 ? 'rgba(255,255,255,0.04)' : 'rgba(255,255,255,0.015)'}
+                fill={i % 2 === 0 ? 'rgba(255, 255, 255, 0.08)' : 'rgba(12, 0, 0, 0.12)'}
               />
             );
           })}
           {/* Center circle */}
-          <circle cx="0" cy="0" r="0.12" fill="rgba(255,255,255,0.06)" />
+          <circle cx="0" cy="0" r="0.12" fill="rgba(255, 255, 255, 0.09)" />
         </motion.svg>
       </div>
 

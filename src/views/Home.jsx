@@ -210,7 +210,7 @@ export const Home = () => {
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <div className="absolute left-4 sm:left-10 xl:left-40 bottom-10 sm:top-2/5 -translate-y-1/2 flex flex-col gap-5 items-start max-w-[340px] pointer-events-auto">
+                  <div className="absolute left-4 sm:left-10 xl:left-40 bottom-10 sm:top-2/5 top-3/4  -translate-y-1/2 flex flex-col gap-5 items-start max-w-[340px] pointer-events-auto">
                     <p className="text-amber-400 text-sm font-bold tracking-[0.3em] uppercase">Hi there!</p>
 
                     <div>
@@ -358,7 +358,7 @@ export const Home = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
 
-          className="relative z-10 w-full max-w-5xl mx-auto px-5 md:px-8 sm:mt-10 mt-5 text-center"
+          className="relative z-10 w-full max-w-5xl mx-auto px-5 md:px-8 sm:mt-10 mt-7 text-center"
         >
           {/* First line */}
           <p
