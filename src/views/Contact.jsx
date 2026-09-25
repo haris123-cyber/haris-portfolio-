@@ -171,8 +171,8 @@ export const Contact = () => {
           <span>© 2025 Haris. All rights reserved.</span>
           <div className="flex items-center gap-8">
             <a href="#" className="hover:text-white transition-colors">Twitter</a>
-            <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="#" className="hover:text-white transition-colors">GitHub</a>
+            <a href="https://www.linkedin.com/in/haris-m-kdr" className="hover:text-white transition-colors">LinkedIn</a>
+            <a href="https://github.com/haris123-cyber" className="hover:text-white transition-colors">GitHub</a>
           </div>
         </motion.div>
 

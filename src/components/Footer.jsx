@@ -30,10 +30,10 @@ export const Footer = () => {
         <div className="flex flex-col items-center md:items-end gap-10">
           <div className="flex gap-4">
             {[
-              { href: 'https://github.com', icon: <FaXTwitter size={20} /> },
-              { href: 'https://twitter.com', icon: <FaWhatsapp size={20} /> },
-              { href: 'https://linkedin.com', icon: <FaLinkedinIn size={20} /> },
-              { href: 'mailto:hello@example.com', icon: <FaFacebookF size={20} /> },
+              { href: 'https://github.com/haris123-cyber', icon: <FaXTwitter size={20} /> },
+              { href: 'https://wa.me/9061274433', icon: <FaWhatsapp size={20} /> },
+              { href: 'https://www.linkedin.com/in/haris-m-kdr', icon: <FaLinkedinIn size={20} /> },
+              { href: '#', icon: <FaFacebookF size={20} /> },
             ].map(({ href, icon }) => (
               <a
                 key={href}

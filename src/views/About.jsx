@@ -9,12 +9,12 @@ export const About = () => {
       {/* ── BACKGROUND IMAGE WITH FADE TO BLACK ── */}
       <div className="absolute inset-0 z-0 select-none pointer-events-none">
         <div
-          className="absolute inset-20 -mb-20 md:-inset-10 md:left-auto md:right-[10%] lg:right-[18%] w-full md:w-[70%] lg:w-[60%] bg-[url('/images/my/image.png')] bg-contain md:bg-cover bg-no-repeat bg-[position:right_80%] md:bg-top opacity-100 scale-[1.3] md:scale-100 origin-[80%_80%] md:origin-center"
+          className="absolute inset-20 -mb-10 md:-inset-10 md:left-auto md:right-[10%] lg:right-[18%] w-full md:w-[70%] lg:w-[60%] bg-[url('/images/my/image.png')] bg-contain md:bg-cover bg-no-repeat bg-[position:right_80%] md:bg-top opacity-100 scale-[1.3] md:scale-100 origin-[80%_80%] md:origin-center"
         />
         {/* Gradients to fade edges into black */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black" />
+        <div className="absolute -inset-10 bg-gradient-to-t from-black via-transparent to-black" />
         {/* Stronger fade from the left */}
-        <div className="absolute inset-y-0 left-0 w-[60%] md:w-[60%] bg-gradient-to-r from-black via-black/100 md:via-black/100 to-transparent" />
+        <div className="absolute inset-y-0 left-0 w-[50%] md:w-[60%] bg-gradient-to-r from-black via-black/100 md:via-black/100 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-l from-black via-transparent to-transparent" />
         <div className="absolute inset-0 hidden md:block" style={{ background: 'radial-gradient(circle at center, transparent 20%, black 80%)' }} />
       </div>
@@ -43,11 +43,10 @@ export const About = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="font-['Playfair_Display'] text-5xl md:text-6xl lg:text-[90px] xl:text-[110px] leading-[1] tracking-tight mb-16"
+              className="font-['Playfair_Display'] text-[40px] sm:text-5xl md:text-6xl lg:text-[90px] xl:text-[110px] leading-[1.1] md:leading-[1] tracking-tight mb-16"
             >
-              Not a pixel<br />
-              pusher. <span className="block italic text-[#FF6B00] mt-2">A possibility</span>
-              pusher.
+              <span className="block">Not a pixel pusher.</span>
+              <span className="block"><span className="italic text-[#FF6B00]">A possibility</span> pusher.</span>
             </motion.h2>
 
             <motion.div
@@ -63,14 +62,14 @@ export const About = () => {
           </div>
 
           {/* ── RIGHT COLUMN ── */}
-          <div className="flex flex-col gap-10 md:ml-auto max-w-sm sm:pt-4 pt-0 md:pt-10">
+          <div className="flex flex-col gap-10 md:ml-auto w-full md:max-w-sm sm:pt-4 pt-0 md:pt-10">
             {/* Top Right text */}
             <motion.h3
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-              className="font-['Playfair_Display'] text-2xl md:text-3xl lg:text-4xl text-white leading-snug"
+              className="font-['Playfair_Display'] text-2xl md:text-3xl lg:text-4xl  text-white leading-snug"
             >
               A generalist by choice.<br />
               A perfectionist by nature.
@@ -91,7 +90,10 @@ export const About = () => {
                 href="#"
                 className="inline-flex items-center gap-2 text-[10px] tracking-[0.2em] font-bold text-[#D3FF36] uppercase group w-fit pb-1 border-b border-[#D3FF36]/30 hover:border-[#D3FF36] transition-colors"
               >
-                <span>Read Resume</span>
+
+                <a href={`${import.meta.env.BASE_URL}images/Haris_M_Resume.pdf`} download className="btn btn-primary">
+                  Read Resume<i className="fas fa-download" style={{ marginLeft: '8px' }}></i>
+                </a>
                 <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
               </a>
             </motion.div>

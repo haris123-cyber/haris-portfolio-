@@ -248,7 +248,7 @@ export const Home = () => {
 
                       {[
                         {
-                          href: "https://instagram.com/",
+                          href: "https://www.instagram.com/al__haris_?igsh=Z3NqYTdpamxwOHd3",
                           label: "Instagram",
                           icon: <FaInstagram size={16} />,
                         },
@@ -258,17 +258,17 @@ export const Home = () => {
                           icon: <FaFacebookF size={16} />,
                         },
                         {
-                          href: "https://wa.me/",
+                          href: "https://wa.me/9061274433",
                           label: "WhatsApp",
                           icon: <FaWhatsapp size={16} />,
                         },
                         {
-                          href: "https://linkedin.com/",
+                          href: "https://www.linkedin.com/in/haris-m-kdr",
                           label: "LinkedIn",
                           icon: <FaLinkedinIn size={16} />,
                         },
                         {
-                          href: "https://x.com/",
+                          href: "https://github.com/haris123-cyber",
                           label: "Twitter",
                           icon: <FaXTwitter size={16} />,
                         },

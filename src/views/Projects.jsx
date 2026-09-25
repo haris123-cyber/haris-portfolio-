@@ -7,12 +7,12 @@ const allProjects = [
   {
     id: "woxly",
     number: "01",
-    title: "WOXLY — Grocery E-commerce Platform",
+    title: "WOXLY —  E-commerce Platform",
 
     category: "Client Project / E-commerce / Frontend Development",
 
     description:
-      "Developed a modern grocery e-commerce storefront for Woxly, a real-world business. Focused on building a responsive shopping experience, implementing reusable UI components, integrating product data, and creating an intuitive interface for online shopping.",
+      "Developed a modern grocery, fashion e-commerce storefront for Woxly, a real-world business. Focused on building a responsive shopping experience, implementing reusable UI components, integrating product data, and creating an intuitive interface for online shopping.",
 
     tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
 
@@ -21,7 +21,7 @@ const allProjects = [
 
     github: "#",
     live: "YOUR_ACTUAL_WOXLY_WEBSITE_URL",
-    image: null,
+    image: "/images/projects/woxly.png",
   },
 
   {
@@ -31,7 +31,7 @@ const allProjects = [
     category: "Ride-Hailing / Full-Stack Development / Mobility",
 
     description:
-      "An Uber-inspired ride-booking platform designed to simplify urban transportation. The platform focuses on seamless ride booking, convenient pickup and drop-off selection, ride management, and an intuitive user experience connecting passengers with drivers.",
+      "Modern web application featuring secure authentication, pickup and destination selection, real-time fare calculation, online payment processing, ride management, trip history, notifications, and role-based access control for users, drivers, and administrators.",
 
     tech: ["React", "Python", "Django", "Tailwind CSS", "REST API"],
 
@@ -70,34 +70,20 @@ const allProjects = [
   {
     id: "leaskart",
     number: "04",
-    title: "Leaskart — E-commerce Platform",
-    category: "E-commerce / Web Development",
+    title: "Property Management Portal",
+    category: "Web Application / Property Management",
 
     description:
-      "An e-commerce platform concept focused on creating a smooth online shopping experience. Designed around intuitive navigation, product discovery, responsive layouts, and an organized product presentation.",
+      "Smart property leasing and management system featuring property listings, tenant management, rent collection, maintenance tracking, and role-based access control.",
 
-    tech: ["React", "JavaScript", "Tailwind CSS", "REST API"],
+    tech: ["Python", "Django", "HTML", "CSS", "Bootstrap", "SQLite"],
 
     github: "#",
     live: "#",
     image: "/images/projects/leasekart.png",
   },
 
-  {
-    id: "property-management",
-    number: "05",
-    title: "Property Management Portal",
-    category: "Web Application / Property Management",
 
-    description:
-      "A property management web application designed to organize property information and simplify day-to-day management tasks. The platform can provide structured property listings, tenant information, and management workflows through an accessible interface.",
-
-    tech: ["Python", "Django", "HTML", "CSS", "Bootstrap", "SQLite"],
-
-    github: "#",
-    live: "#",
-    image: null,
-  },
 ];
 
 export const Projects = () => {
