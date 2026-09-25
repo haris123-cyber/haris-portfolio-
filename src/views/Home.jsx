@@ -191,9 +191,7 @@ export const Home = () => {
             <canvas ref={canvasRef} className="w-full h-full" />
           </div>
 
-          {/* Overlay */}
-          <div className="absolute inset-0 z-[2] pointer-events-none"
-            style={{ background: 'radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.95) 100%)' }} />
+
 
 
 
@@ -210,7 +208,7 @@ export const Home = () => {
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <div className="absolute left-4 sm:left-10 xl:left-40 bottom-10 sm:top-2/5 top-3/4  -translate-y-1/2 flex flex-col gap-5 items-start max-w-[340px] pointer-events-auto">
+                  <div className="absolute left-4 sm:left-10 xl:left-40 bottom-10 sm:top-2/5 bottom-0 -translate-y-1/2 flex flex-col gap-5 items-start max-w-[340px] pointer-events-auto">
                     <p className="text-amber-400 text-sm font-bold tracking-[0.3em] uppercase">Hi there!</p>
 
                     <div>
