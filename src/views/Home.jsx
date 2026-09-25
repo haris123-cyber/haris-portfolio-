@@ -100,8 +100,6 @@ export const Home = () => {
 
   const frame98Index = frames.indexOf("frame_098.png");
 
-  const GITHUB_CDN = 'https://media.githubusercontent.com/media/haris123-cyber/haris-portfolio-/main/public/images/hero/';
-
   // Preload images
   useEffect(() => {
     let settledCount = 0;
@@ -113,10 +111,12 @@ export const Home = () => {
       if (settledCount >= threshold && !isLoaded) setIsLoaded(true);
     };
 
+    const CLOUDINARY_CDN = 'https://res.cloudinary.com/zuvsmr0q/image/upload/portfolio-hero/';
+
     frames.forEach((src, index) => {
       const img = new Image();
-      // Load from GitHub media CDN (serves actual LFS content, bypasses Vercel LFS issue)
-      img.src = `${GITHUB_CDN}${src}`;
+      // Load from Cloudinary CDN (works on Vercel — no Git LFS dependency)
+      img.src = `${CLOUDINARY_CDN}${src}`;
       img.onload = onSettle;
       img.onerror = onSettle;
       loadedImages[index] = img;
