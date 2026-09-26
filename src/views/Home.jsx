@@ -208,25 +208,20 @@ export const Home = () => {
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <div className="absolute left-4 sm:left-10 xl:left-40 bottom-10 sm:top-2/5 bottom-0 -translate-y-1/2 flex flex-col gap-5 items-start max-w-[340px] pointer-events-auto">
-                    <p className="text-amber-400 text-sm font-bold tracking-[0.3em] uppercase">Hi there!</p>
+                  <div className="absolute left-4 sm:left-10 xl:left-40 sm:top-1/2 bottom-10 sm:bottom-auto sm:-translate-y-1/2 flex flex-col items-start pointer-events-auto">
+                    <h1 className="text-white text-[80px] sm:text-[110px] md:text-[140px] lg:text-[160px] font-bold leading-[0.85] tracking-[-0.06em]">
+                      <span className="block text-[40px] leading-[1] ml-2 tracking-[1em]">I'AM</span>
+                      <span className="block">HARIS.</span>
+                    </h1>
 
-                    <div>
-                      <p className="text-white/60 text-sm font-medium tracking-widest uppercase mb-2">I am</p>
-                      <h1 className="text-white text-6xl md:text-7xl font-extrabold leading-none border-b-4 border-white pb-2">
-                        Haris
-                      </h1>
+                    <div className="mt-6 md:mt-8 text-white/90 text-base md:text-lg lg:text-xl font-normal tracking-[-0.02em] max-w-sm leading-snug">
+                      <p>Passionate about creating exceptional</p>
+                      <p>digital experiences.</p>
+                      <p className="mt-2 text-white/60  tracking-[0.1em]">
+                        I am a <span className="font-semibold text-white">{currentText}</span>
+                        <span className="animate-blink font-light ml-1">|</span>
+                      </p>
                     </div>
-
-                    <h2 className="text-white text-base font-light flex flex-wrap items-center gap-1">
-                      <span className="font-bold text-[#FF6B00] text-base uppercase tracking-wide">{currentText}</span>
-                      <span className="animate-blink font-light text-white">|</span>
-                    </h2>
-
-                    <p className="text-white/50 text-sm leading-relaxed max-w-xs">
-                      Passionate about creating exceptional digital experiences that blend
-                      innovative design with functional development.
-                    </p>
                   </div>
                 </motion.div>
               ) : (
@@ -238,13 +233,18 @@ export const Home = () => {
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <div className="absolute right-6 sm:right-4 md:right-10 xl:right-40 sm:top-3/4  top-2/3 -translate-y-1/2 flex flex-col items-center max-w-[340px] pointer-events-auto">
+                  <div className="absolute right-6 sm:right-10 md:right-16 xl:right-40 top-[60%] sm:top-1/2 -translate-y-1/2 flex flex-col items-end pointer-events-auto">
 
                     {/* Heading */}
-
+                    <div className="mb-8 flex flex-col items-end">
+                      <h2 className="text-white text-[60px] sm:text-[80px] md:text-[110px] lg:text-[130px] font-bold leading-[0.85] tracking-[-0.05em] text-right">
+                        <span className="block text-[24px] sm:text-[30px] md:text-[40px] leading-[1] mr-2 tracking-[0.6em] md:tracking-[0.8em]">LET'S</span>
+                        <span className="block">CONNECT.</span>
+                      </h2>
+                    </div>
 
                     {/* Social Links */}
-                    <div className="flex flex-col gap-4">
+                    <div className="flex flex-row gap-4">
 
                       {[
                         {
@@ -356,13 +356,13 @@ export const Home = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
 
-          className="relative z-10 w-full max-w-5xl mx-auto px-5 md:px-8 sm:mt-10 mt-7 text-center"
+          className="relative z-10 w-full max-w-5xl mx-auto px-5 md:px-8 sm:mt-10 lg:mt-15 mt-7 text-center"
         >
           {/* First line */}
           <p
             className="font-['Playfair_Display'] text-2xl sm:text-3xl
-      md:text-5xl lg:text-6xl font-bold leading-tight
-      tracking-tight text-black "
+      md:text-5xl lg:text-5xl font-bold leading-tight
+      tracking-tight text-black italic"
           >
             "The best way to predict the future
           </p>
@@ -370,8 +370,8 @@ export const Home = () => {
           {/* Second line */}
           <p
             className="font-['Playfair_Display'] text-2xl sm:text-3xl
-      md:text-5xl lg:text-6xl font-bold leading-tight
-      tracking-tight text-white mt-2"
+      md:text-5xl lg:text-5xl font-bold leading-tight
+      tracking-tight text-white mt-2 italic"
           >
             is to{" "}
             <em className="not-italic text-[#FF6B00]">create</em>

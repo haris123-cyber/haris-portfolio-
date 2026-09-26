@@ -18,7 +18,7 @@ export const Contact = () => {
   const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   return (
-    <section id="contact" className="relative w-full bg-black text-white overflow-hidden selection:bg-[#D3FF36] selection:text-black">
+    <section id="contact" className="relative w-full bg-black text-white overflow-hidden selection:bg-[#D3FF36] -mb-10 selection:text-black">
 
       {/* ── GIANT ROTATING SUNBURST WHEEL ── */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[30%] w-[70vw] h-[70vw] md:w-[55vw] md:h-[55vw] pointer-events-none select-none z-0">
@@ -166,14 +166,9 @@ export const Contact = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="mt-32 pt-8 border-t border-white/[0.06] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-[10px] text-white/30 uppercase tracking-widest"
+          className="mt-3 pt-2 border-t border-white/[0.06] flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-[10px] text-white/30 uppercase tracking-widest"
         >
-          <span>© 2025 Haris. All rights reserved.</span>
-          <div className="flex items-center gap-8">
-            <a href="#" className="hover:text-white transition-colors">Twitter</a>
-            <a href="https://www.linkedin.com/in/haris-m-kdr" className="hover:text-white transition-colors">LinkedIn</a>
-            <a href="https://github.com/haris123-cyber" className="hover:text-white transition-colors">GitHub</a>
-          </div>
+
         </motion.div>
 
       </div>

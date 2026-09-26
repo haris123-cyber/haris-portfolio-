@@ -10,7 +10,7 @@ import {
 
 export const Footer = () => {
   return (
-    <footer className="bg-black py-24 border-t border-white/10 relative overflow-hidden">
+    <footer className="bg-black py-8 border-t border-white/10 relative overflow-hidden">
       {/* Background grain */}
       <div className="absolute inset-0 pointer-events-none opacity-[0.03]" style={{ backgroundImage: 'radial-gradient(#ffffff 1px, transparent 1px)', backgroundSize: '32px 32px' }} />
 

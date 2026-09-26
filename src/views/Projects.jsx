@@ -88,7 +88,7 @@ const allProjects = [
 
 export const Projects = () => {
   return (
-    <section className="bg-white text-[#111827] py-20 md:py-32">
+    <section className="bg-white text-[#111827] py-20 -pb-20 md:py-32">
       <div className="w-full mx-auto">
         {/* Header */}
         <motion.div
