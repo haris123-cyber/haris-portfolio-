@@ -20,8 +20,19 @@ export const Navbar = () => {
         document.elementFromPoint(window.innerWidth * 0.75, 70),
       ].filter(Boolean);
 
+      const getBgColor = (el) => {
+        while (el) {
+          const bg = window.getComputedStyle(el).backgroundColor;
+          if (bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent' && bg !== '') {
+            return bg;
+          }
+          el = el.parentElement;
+        }
+        return 'rgb(0, 0, 0)'; // fallback to dark
+      };
+
       const lightCount = points.filter(el => {
-        const bg = window.getComputedStyle(el).backgroundColor;
+        const bg = getBgColor(el);
         const match = bg.match(/\d+/g);
         if (!match) return false;
         const [r, g, b] = match.map(Number);
@@ -55,7 +66,7 @@ export const Navbar = () => {
       >
         <div className="max-w-7xl mx-auto flex justify-end items-center">
           {/* Desktop links */}
-          <div className="hidden md:flex gap-8">
+          <div className="hidden md:flex gap-8 border-1 bg-black/10 backdrop-blur-sm p-2 px-6 rounded-full">
             {links.map(link => (
               <Link
                 key={link.href}
@@ -73,20 +84,20 @@ export const Navbar = () => {
 
           {/* Hamburger (mobile) */}
           <button
-            className={`md:hidden ${isDark ? 'text-white' : 'text-black'} hover:text-[#FF6B00] transition-colors relative z-50`}
+            className={`md:hidden ${pathname === '/projects' || !isDark ? 'text-black' : 'text-white'} hover:text-[#FF6B00] transition-colors relative z-50`}
             onClick={() => setMenuOpen(!menuOpen)}
             aria-label="Toggle navigation"
           >
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
               <motion.line
-                y1="6" y2="6"
-                animate={{ x1: menuOpen ? 2 : 10, x2: menuOpen ? 13 : 21 }}
+                initial={{ x1: 10, x2: 21, y1: 6, y2: 6 }}
+                animate={{ x1: menuOpen ? 2 : 10, x2: menuOpen ? 13 : 21, y1: 6, y2: 6 }}
                 transition={{ duration: 0.3, ease: "easeInOut", delay: menuOpen ? 0 : 0.15 }}
               />
               <line x1="6" y1="12" x2="17" y2="12" />
               <motion.line
-                y1="18" y2="18"
-                animate={{ x1: menuOpen ? 10 : 2, x2: menuOpen ? 21 : 13 }}
+                initial={{ x1: 2, x2: 13, y1: 18, y2: 18 }}
+                animate={{ x1: menuOpen ? 10 : 2, x2: menuOpen ? 21 : 13, y1: 18, y2: 18 }}
                 transition={{ duration: 0.3, ease: "easeInOut", delay: menuOpen ? 0.15 : 0 }}
               />
             </svg>

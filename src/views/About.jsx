@@ -19,7 +19,7 @@ export const About = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-[9px] uppercase tracking-[0.3em] text-white/40 sm:mb-12 flex items-center gap-4"
+            className="sm:text-[9px] text-[7px] uppercase tracking-[0.3em] text-white/40 sm:mb-12 mb-6 flex items-center gap-1 sm:gap-4"
           >
             <span>Developer</span> <span className="text-white/20">/</span>
             <span>Designer</span> <span className="text-white/20">/</span>
@@ -36,7 +36,7 @@ export const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-                className="text-white font-bold leading-[0.9] tracking-[-0.04em] mb-4 md:mb-16"
+                className="text-white font-bold leading-[0.9] tracking-[-0.04em] mb-8 md:mb-16"
               >
                 {/* Desktop Headline */}
                 <div className="hidden md:block text-[80px] lg:text-[100px] xl:text-[110px]">
@@ -45,7 +45,7 @@ export const About = () => {
                   <span className="block">Create.</span>
                 </div>
                 {/* Mobile Headline */}
-                <div className="md:hidden text-[50px] sm:text-[50px] mt-5 -mb-10">
+                <div className="md:hidden text-[40px] sm:text-[50px] mt-0 -mb-20">
                   <span className="block">Build.</span>
                   <span className="block text-[#FF6B00]">Learn.</span>
                   <span className="block">Create.</span>
@@ -55,14 +55,14 @@ export const About = () => {
 
             </div>
 
-            {/* ── CENTER IMAGE (Mobile inline, Desktop absolute center) ── */}
-            <div className="relative md:absolute md:top-[40%] lg:top-1/2 md:left-[45%] lg:left-[40%] md:-translate-x-1/2 md:-translate-y-1/2 w-full flex justify-center md:max-w-[350px] lg:max-w-[450px] z-0 pointer-events-none mt-2 md:mt-0">
+            {/* ── CENTER IMAGE (Mobile inline, Desktop absolute center, Tablet bottom-left) ── */}
+            <div className="relative md:absolute md:top-[75%] lg:top-1/2 md:left-[25%] lg:left-[40%] md:-translate-x-1/2 md:-translate-y-1/2 w-full flex justify-center md:max-w-[280px] lg:max-w-[450px] z-0 pointer-events-none mt-2 md:mt-0">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="relative w-full max-w-[200px] sm:max-w-[250px] md:max-w-full overflow-hidden shadow-2xl"
+                className="relative w-full max-w-[200px] sm:max-w-[250px] md:max-w-full overflow-hidden shadow-2xl sm:mb-0 -mb-12"
               >
                 <img
                   src="/images/my/image_copy.png"
@@ -82,7 +82,7 @@ export const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                className="text-white text-[30px] md:text-[30px] lg:text-[40px] font-bold leading-[0.95] tracking-[-0.03em]"
+                className="text-white text-[20px] sm:text-[30px] md:text-[30px] lg:text-[40px] font-bold leading-[1] tracking-[0.03em]"
               >
                 A generalist by choice.<br />
                 A perfectionist by nature.
@@ -96,18 +96,16 @@ export const About = () => {
                 transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
                 className="flex flex-col gap-6 ]"
               >
-                <RevealText progress={scrollYProgress} >
+                <RevealText progress={scrollYProgress}  >
                   I am a Full-Stack Developer specializing in frontend and backend development. I enjoy building modern, responsive, and user-friendly web applications with a focus on clean code and simple solutions. Feel free to explore my projects and get in touch if you'd like to collaborate.
                 </RevealText>
 
                 <a
-                  href="#"
-                  className="inline-flex items-center gap-2 text-[10px] tracking-[0.2em] font-bold text-[#D3FF36] uppercase group w-fit pb-1 border-b border-[#D3FF36]/30 hover:border-[#D3FF36] transition-colors"
+                  href="/images/Haris_M_Resume.pdf" 
+                  download
+                  className="inline-flex items-center gap-2 text-[8px] sm:text-[10px] tracking-[0.2em] font-bold text-[#D3FF36] uppercase group w-fit sm:pb-1 pb-0 border-b border-[#D3FF36]/30 hover:border-[#D3FF36] transition-colors sm:mb-0 -mb-12 sm:mt-0 -mt-5"
                 >
-
-                  <a href={`${import.meta.env.BASE_URL}images/Haris_M_Resume.pdf`} download className="btn btn-primary">
-                    Read Resume<i className="fas fa-download" style={{ marginLeft: '8px' }}></i>
-                  </a>
+                  Read Resume<i className="fas fa-download" style={{ marginLeft: '8px' }}></i>
                   <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
                 </a>
               </motion.div>
@@ -118,16 +116,16 @@ export const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-                className="mt-10 md:mt-20 flex justify-between items-end border-t border-white/10 pt-6 "
+                className="mt-10 md:mt-20 flex justify-between items-end border-none sm:border-t border-white/10 pt-0 sm:pt-6 sm:mt-0  "
               >
-                <div className="flex flex-col gap-2">
-                  <span className="text-[8px] uppercase tracking-[0.2em] text-white/40">Based In</span>
-                  <span className="text-sm font-medium flex items-center gap-2">Kozhikode, India <span className="w-1.5 h-1.5 rounded-full bg-[#FF6B00]"></span></span>
-                  <span className="text-[8px] uppercase tracking-[0.2em] text-white/40 mt-1">Open to Opportunities</span>
+                <div className="flex flex-col sm:gap-2 gap-0  ">
+                  <span className="sm:text-[8px] text-[7px] uppercase tracking-[0.2em] text-white/40">Based In</span>
+                  <span className="sm:text-sm text-[12px] font-medium flex items-center gap-2">Kozhikode, India <span className="w-1.5 h-1.5 rounded-full bg-[#FF6B00]"></span></span>
+                  <span className="sm:text-[8px] text-[7px] uppercase tracking-[0.2em] text-white/40 mt-1">Open to Opportunities</span>
                 </div>
 
                 {/* Spinning Badge */}
-                <div className="relative w-16 h-16 flex items-center justify-center">
+                <div className="relative w-16 h-16  flex items-center justify-center">
                   <motion.svg
                     viewBox="0 0 100 100"
                     animate={{ rotate: 360 }}
@@ -156,7 +154,7 @@ export const About = () => {
 const RevealText = ({ children, progress }) => {
   const words = children.split(" ");
   return (
-    <p className="text-lg md:text-xl lg:text-2xl font-medium leading-relaxed">
+    <p className="text-sm md:text-xl  lg:text-2xl font-medium leading-relaxed">
       {words.map((word, i) => {
         const start = i / words.length;
         const end = start + (1 / words.length);

@@ -58,7 +58,7 @@ const frames = [
 
 const totalFrames = frames.length;
 
-export const Home = () => {
+export const Home = ({ onLoaded }) => {
   const containerRef = useRef(null);
   const canvasRef = useRef(null);
   const [images, setImages] = useState([]);
@@ -108,7 +108,10 @@ export const Home = () => {
 
     const onSettle = () => {
       settledCount++;
-      if (settledCount >= threshold && !isLoaded) setIsLoaded(true);
+      if (settledCount >= threshold && !isLoaded) {
+        setIsLoaded(true);
+        onLoaded?.();
+      }
     };
 
     const CLOUDINARY_CDN = 'https://res.cloudinary.com/zuvsmr0q/image/upload/portfolio-hero/';
@@ -124,7 +127,7 @@ export const Home = () => {
     setImages(loadedImages);
 
     // Safety fallback — always show after 8s no matter what
-    const timeout = setTimeout(() => setIsLoaded(true), 8000);
+    const timeout = setTimeout(() => { setIsLoaded(true); onLoaded?.(); }, 8000);
     return () => clearTimeout(timeout);
   }, []);
 
@@ -208,9 +211,9 @@ export const Home = () => {
                   exit={{ opacity: 0, x: -20 }}
                   transition={{ duration: 0.6 }}
                 >
-                  <div className="absolute left-4 sm:left-10 xl:left-40 sm:top-1/2 bottom-10 sm:bottom-auto sm:-translate-y-1/2 flex flex-col items-start pointer-events-auto">
+                  <div className="absolute left-4 sm:left-10 xl:left-40 top-1/2 sm:top-1/2 bottom-10 sm:bottom-auto sm:-translate-y-1/2 flex flex-col items-start pointer-events-auto">
                     <h1 className="text-white text-[80px] sm:text-[110px] md:text-[140px] lg:text-[160px] font-bold leading-[0.85] tracking-[-0.06em]">
-                      <span className="block text-[40px] leading-[1] ml-2 tracking-[1em]">I'AM</span>
+                      <span className="block text-[24px] leading-[1] ml-2 sm:tracking-[0.8em] tracking-[0.6em]">I'AM</span>
                       <span className="block">HARIS.</span>
                     </h1>
 
@@ -306,13 +309,7 @@ export const Home = () => {
           {/* Scroll Indicator */}
 
 
-          {/* Loading */}
-          {!isLoaded && (
-            <div className="absolute z-[5] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 
-              text-white text-lg font-semibold tracking-widest animate-pulse">
-              Loading Experience...
-            </div>
-          )}
+          {/* Loading handled globally by LoadingScreen in App.jsx */}
         </div>
       </section>
 

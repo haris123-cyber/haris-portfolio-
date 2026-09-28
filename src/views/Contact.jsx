@@ -148,6 +148,7 @@ export const Contact = () => {
               <div className="pt-4">
                 <button
                   type="submit"
+                  suppressHydrationWarning
                   className="group flex items-center justify-between gap-4 w-full bg-[#FF6B00] text-black font-bold text-sm uppercase tracking-widest px-8 py-5 hover:bg-white transition-colors duration-300"
                 >
                   <span>Send it my way</span>
